@@ -18,7 +18,7 @@
         margin: auto;
       }
       h2 {
-        padding-top: 20px;
+        padding: 20px 0;
         color: #d8dee9;
         font: 36px Tahoma;
       }
@@ -27,13 +27,33 @@
         margin: 10px auto 0;
         color: #81a1c1;
       }
+      .good_refs {
+        width: 100%;
+        background-color: #2e3440;
+        border-radius: 20px;
+      }
+      .good_refs h3 {
+        padding: 10px 20px 0px;
+      }
+      .names {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+      p {
+        width: 30%;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        font: 24px Tahoma;
+        color: #d08770;
+      }
       .infos {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
       .info {
-        width: 40%;
+        width: 45%;
         padding: 1% 2% 2%;
         margin: 2% 0;
         box-sizing: border-box;
@@ -54,6 +74,12 @@
   <body>
     <div id="app">
       <h2>全部人數 : {{ memNums }}</h2>
+      <section class="good_refs">
+        <h3>可參考範例</h3>
+        <div class="names">
+          <p v-for="info in infos">{{ info.id }}</p>
+        </div>
+      </section>
       <section class="infos">
         <div class="info">
           <h3>聯絡方式</h3>

@@ -1,0 +1,305 @@
+[
+  {
+    "id": "A-25高嘉穎",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "QRcode": false
+    },
+    "專業技術": true,
+    "自我介紹": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "A-26王馨霈",
+    "聯絡方式": {
+      "地址": false,
+      "email": true,
+      "電話": false,
+      "生日": true,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "作品集": ["MEOW COFFEE", "和春園度假飯店"],
+      "QRcode": true
+    },
+    "專業技術": true,
+    "自我介紹": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "A-27高啟祥",
+    "聯絡方式": {
+      "地址": false,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": false,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "作品集": ["福立斯攝影", "世際美術館"],
+      "QRcode": true
+    },
+    "專業技術": true,
+    "自我介紹": true,
+    "語文能力": true,
+    "英文自介": false
+  },
+  {
+    "id": "A-28高慧芳",
+    "聯絡方式": {
+      "地址": false,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "QRcode": true
+    },
+    "專業技術": true,
+    "自我介紹": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "A-28林宗靖",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": false,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "作品集": ["真挑TEA", "做怪"],
+      "QRcode": true
+    },
+    "專業技術": true,
+    "自我介紹": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "A-29王淨瑩",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "github": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "QRcode": true
+    },
+    "自我介紹": true,
+    "專業技術": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "A-29林佩瑤",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "QRcode": true
+    },
+    "專業技術": true,
+    "自我介紹": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "B-1蘇冠心",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": false,
+      "團體作品": false,
+      "QRcode": false
+    },
+    "自我介紹": true,
+    "專業技術": true,
+    "語文能力": true,
+    "英文自介": true
+  },
+  {
+    "id": "B-3魏禹如",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": false,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "QRcode": false
+    },
+    "專業技術": true,
+    "自我介紹": true,
+    "語文能力": true,
+    "英文自介": true
+  },
+  {
+    "id": "B-5賴羿舟",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": false,
+    "作品網址": {
+      "個人作品": false,
+      "團體作品": false,
+      "QRcode": false
+    },
+    "自我介紹": true,
+    "專業技術": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "B-6張秉程",
+    "聯絡方式": {
+      "地址": true,
+      "email": true,
+      "電話": true,
+      "生日": true,
+      "gitHub": true
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "QRcode": false
+    },
+    "自我介紹": true,
+    "專業技術": true,
+    "語文能力": false,
+    "英文自介": false
+  },
+  {
+    "id": "B-7黃君曦",
+    "聯絡方式": {
+      "地址": false,
+      "email": true,
+      "電話": true,
+      "生日": false,
+      "gitHub": false
+    },
+    "教育": {
+      "資策會": true,
+      "大學": true
+    },
+    "經歷": true,
+    "獲獎經驗": true,
+    "作品網址": {
+      "個人作品": true,
+      "團體作品": true,
+      "QRcode": true
+    },
+    "自我介紹": true,
+    "專業技術": true,
+    "語文能力": false,
+    "英文自介": false
+  }
+]

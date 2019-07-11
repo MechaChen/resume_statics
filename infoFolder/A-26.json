@@ -1,0 +1,26 @@
+{
+  "id": "A-26王馨霈",
+  "聯絡方式": {
+    "地址": false,
+    "email": true,
+    "電話": false,
+    "生日": true,
+    "gitHub": false
+  },
+  "教育": {
+    "資策會": true,
+    "大學": true
+  },
+  "經歷": true,
+  "獲獎經驗": true,
+  "作品網址": {
+    "個人作品": true,
+    "團體作品": true,
+    "作品集": ["MEOW COFFEE", "和春園度假飯店"],
+    "QRcode": true
+  },
+  "專業技術": true,
+  "自我介紹": true,
+  "語文能力": false,
+  "英文自介": false
+}

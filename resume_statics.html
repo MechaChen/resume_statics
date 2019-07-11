@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>履歷統計</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #434c5e;
+      }
+      #app {
+        width: 80%;
+        margin: auto;
+      }
+      h2 {
+        padding-top: 20px;
+        color: #d8dee9;
+        font: 36px Tahoma;
+      }
+      h3 {
+        font: 30px Tahoma;
+        margin: 10px auto 0;
+        color: #81a1c1;
+      }
+      .infos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .info {
+        width: 40%;
+        padding: 1% 2% 2%;
+        margin: 2% 0;
+        box-sizing: border-box;
+        background-color: #2e3440;
+        border-radius: 20px;
+      }
+      ul {
+        padding-left: 20px;
+        margin: 5px 0;
+      }
+      li {
+        color: #ebcb8b;
+        list-style: none;
+        font: 24px Tahoma;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h2>全部人數 : {{ memNums }}</h2>
+      <section class="infos">
+        <div class="info">
+          <h3>聯絡方式</h3>
+          <ul>
+            <li>
+              含地址：{{ locNums }} (
+              {{ (locNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+            <li>
+              含emial：{{ emailNums }} (
+              {{ (emailNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+            <li>
+              含電話：{{ telNums }} (
+              {{ (telNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+            <li>
+              含生日：{{ birthNums }} (
+              {{ (birthNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+            <li>
+              含gitHub：{{ gitHubNums }} (
+              {{ (gitHubNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>教育程度</h3>
+          <ul>
+            <li>
+              含資策會：{{ eduIIINums }} (
+              {{ (eduIIINums / memNums).toFixed(2) * 100 }}% )
+            </li>
+            <li>
+              含大學：{{ eduUniNums }} (
+              {{ (eduUniNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>經歷</h3>
+          <ul>
+            <li>
+              含大學：{{ expNums }} (
+              {{ (expNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>獲獎經驗</h3>
+          <ul>
+            <li>
+              含獲獎經歷：{{ awardNums }} (
+              {{ (awardNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>作品網址</h3>
+          <ul>
+            <li>
+              含個人作品：{{ workIndNums }} (
+              {{ (workIndNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+            <li>
+              含團體作品：{{ workGroupNums }} (
+              {{ (workGroupNums / memNums).toFixed(2) * 100 }}% )
+            </li>
+            <li>
+              含QRcode：{{ workQRcodeNums }} (
+              {{ (workQRcodeNums / memNums).toFixed(1) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>專業技術</h3>
+          <ul>
+            <li>
+              含專業技術：{{ proSkillNums }} (
+              {{ (proSkillNums / memNums).toFixed(1) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>自我介紹</h3>
+          <ul>
+            <li>
+              含自我介紹：{{ introNums }} (
+              {{ (introNums / memNums).toFixed(1) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>語文能力</h3>
+          <ul>
+            <li>
+              含語文能力：{{ langNums }} (
+              {{ (langNums / memNums).toFixed(1) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+        <div class="info" style="margin-right: auto;">
+          <h3>英文自介</h3>
+          <ul>
+            <li>
+              含英文自介：{{ engIntroNums }} (
+              {{ (engIntroNums / memNums).toFixed(1) * 100 }}% )
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          infos: []
+        },
+        computed: {
+          memNums() {
+            console.log(this.infos);
+            return this.infos.length;
+          },
+          locNums() {
+            const { infos } = this;
+            let locShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["聯絡方式"]["地址"]) locShown++;
+            }
+            return locShown;
+          },
+          emailNums() {
+            const { infos } = this;
+            let emailShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["聯絡方式"].email) emailShown++;
+            }
+            return emailShown;
+          },
+          telNums() {
+            const { infos } = this;
+            let telShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["聯絡方式"]["電話"]) telShown++;
+            }
+            return telShown;
+          },
+          birthNums() {
+            const { infos } = this;
+            let birthShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["聯絡方式"]["生日"]) birthShown++;
+            }
+            return birthShown;
+          },
+          gitHubNums() {
+            const { infos } = this;
+            let gitHubShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["聯絡方式"].gitHub) gitHubShown++;
+            }
+            return gitHubShown;
+          },
+          eduIIINums() {
+            const { infos } = this;
+            let eduIIiShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["教育"]["資策會"]) eduIIiShown++;
+            }
+            return eduIIiShown;
+          },
+          eduUniNums() {
+            const { infos } = this;
+            let eduUniShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["教育"]["大學"]) eduUniShown++;
+            }
+            return eduUniShown;
+          },
+          expNums() {
+            const { infos } = this;
+            let expShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["經歷"]) expShown++;
+            }
+            return expShown;
+          },
+          awardNums() {
+            const { infos } = this;
+            let awardShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["獲獎經驗"]) awardShown++;
+            }
+            return awardShown;
+          },
+          workIndNums() {
+            const { infos } = this;
+            let workIndShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["作品網址"]["個人作品"]) workIndShown++;
+            }
+            return workIndShown;
+          },
+          workGroupNums() {
+            const { infos } = this;
+            let workGroupShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["作品網址"]["團體作品"]) workGroupShown++;
+            }
+            return workGroupShown;
+          },
+          workQRcodeNums() {
+            const { infos } = this;
+            let workQRcodeShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["作品網址"].QRcode) workQRcodeShown++;
+            }
+            return workQRcodeShown;
+          },
+          proSkillNums() {
+            const { infos } = this;
+            let proSkillShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["專業技術"]) proSkillShown++;
+            }
+            return proSkillShown;
+          },
+          introNums() {
+            const { infos } = this;
+            let introShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["自我介紹"]) introShown++;
+            }
+            return introShown;
+          },
+          langNums() {
+            const { infos } = this;
+            let langShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["語文能力"]) langShown++;
+            }
+            return langShown;
+          },
+          engIntroNums() {
+            const { infos } = this;
+            let engIntroShown = 0;
+            for (let i = 0; i < infos.length; i++) {
+              if (infos[i]["英文自介"]) engIntroShown++;
+            }
+            return engIntroShown;
+          }
+        },
+        mounted() {
+          axios
+            .get("infoFolder/all_infos.json")
+            .then(res => (this.infos = res.data));
+        }
+      });
+    </script>
+  </body>
+</html>

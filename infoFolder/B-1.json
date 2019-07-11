@@ -1,0 +1,25 @@
+{
+  "id": "B-1蘇冠心",
+  "聯絡方式": {
+    "地址": true,
+    "email": true,
+    "電話": true,
+    "生日": true,
+    "gitHub": false
+  },
+  "教育": {
+    "資策會": true,
+    "大學": true
+  },
+  "經歷": true,
+  "獲獎經驗": true,
+  "作品網址": {
+    "個人作品": false,
+    "團體作品": false,
+    "QRcode": false
+  },
+  "自我介紹": true,
+  "專業技術": true,
+  "語文能力": true,
+  "英文自介": true
+}
